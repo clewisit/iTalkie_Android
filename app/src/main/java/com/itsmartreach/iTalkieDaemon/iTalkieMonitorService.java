@@ -67,6 +67,11 @@ public class iTalkieMonitorService extends Service {
                     //for VoicePing APP
                     Intent intent2voiceping = new Intent(event == ZmCmdLink.ZmUserEvent.zmEventPttPressed ? "android.intent.action.PTT.down" : "android.intent.action.PTT.up");
                     getApplicationContext().sendBroadcast(intent2voiceping);
+                    
+                    //for aGold Intercom
+                    Intent intent2icom = new Intent(event == ZmCmdLink.ZmUserEvent.zmEventPttPressed ? "android.intent.action.PTT.down" : "android.intent.action.PTT.up");
+                    intent2icom.setComponent(new Component("com.agold.intercom"));
+                    getApplicationContext().sendBroadcast(intent2icom);
 
 
                     sendMessageToActivity("ptt_status", event == ZmCmdLink.ZmUserEvent.zmEventPttPressed ? 1 : 0);
