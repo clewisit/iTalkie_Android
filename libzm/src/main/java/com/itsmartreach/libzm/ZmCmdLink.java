@@ -545,7 +545,7 @@ public class ZmCmdLink  {
                 for (BluetoothDevice device : pairedDevices) {
                     // Add the name and address to an array adapter to show in a ListView
                     //Log.d(Constants.TAG,"Audio : paired BT device: "+device.getName()+" [MAC:"+device.getAddress()+"]");
-                    if ( device.getName().contains("智咪") || dev.getName().contains("iTalkie") ){
+                    if ( device.getName().contains("智咪") || device.getName().contains("iTalkie") ){
                         //Log.i(Constants.TAG,"Audio : found ours: "+device.getName()+" [MAC:"+device.getAddress()+"]");
 
                         return device;
